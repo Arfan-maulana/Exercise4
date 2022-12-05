@@ -21,18 +21,22 @@ namespace Exercise4
         }
         class Stack
         {
-            private int[] ele;
-            private int top;
-            private int max;
-            public Stack(int size)
-            {
-                ele = new int[size];
-                top = -1;
-                max = size;
+            int stack[41];
+            int top;
+            top =-1
             }
 
+        public void push(int element)
+        {
 
-            static void Main(string[] args)
+            node fan;
+            fan = new node(element, null);
+            fan.next = top;
+            top = fan;
+            Console.WriteLine("\n" + element + "pushed");
+        }
+
+        static void Main(string[] args)
             {
             }
         }
