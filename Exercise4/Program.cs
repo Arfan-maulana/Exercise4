@@ -39,14 +39,14 @@ namespace Exercise4
             }
 
             public void push(int element)
-        {
+            {
 
-            node fan;
-            fan = new node(element, null);
-            fan.next = top;
-            top = fan;
-            Console.WriteLine("\n" + element + "pushed");
-        }
+                node fan;
+                fan = new node(element, null);
+                fan.next = top;
+                top = fan;
+                Console.WriteLine("\n" + element + "pushed");
+            }
             public void pop()
             {
                 Console.WriteLine("\nThe poped element is :" + top.info);
@@ -68,7 +68,43 @@ namespace Exercise4
 
             static void Main(string[] args)
             {
+                Stack s = new Stack();
+                while (true)
+                {
+                    Console.WriteLine();
+                    Console.WriteLine("***Stack Menu***\n");
+                    Console.WriteLine("1. Push");
+                    Console.WriteLine("2. pop ");
+                    Console.WriteLine("3. Display");
+                    Console.WriteLine("4. exit");
+                    Console.WriteLine("\nEnter your choice");
+                    string input = Console.ReadLine();
+                    char ch = Convert.ToChar(input == "" ? "0" : input);
+                    switch (ch)
+                    {
+                        case '1':
+                            Console.WriteLine("\nEnter a number : ");
+                            int num = Convert.ToInt32(Console.ReadLine());
+                            s.push(num);
+                            break;
+                        case '2':
+                            if (s.empty())
+                            {
+                                Console.WriteLine("\nStack empty");
+                                break;
+                            }
+                            s.pop();
+                            break;
+                        case '3':
+                            s.display();
+                            break;
+                        case '4':
+                            return;
+                        default:
+                            Console.WriteLine("\nInvalid Choice");
+                            break;
+                    }
+                }
             }
         }
-    }
-}
+    } }
