@@ -24,7 +24,9 @@ namespace Exercise4
             node top;
             public Stack()
             {
-                top = null;
+                int stack = [41];
+                int top;
+                top = -1;
             }
 
             bool empty()
@@ -45,8 +47,12 @@ namespace Exercise4
             top = fan;
             Console.WriteLine("\n" + element + "pushed");
         }
-
-        static void Main(string[] args)
+            public void pop()
+            {
+                Console.WriteLine("\nThe poped element is :" + top.info);
+                top = top.next; // make top point to the next node is squence
+            }
+            static void Main(string[] args)
             {
             }
         }
