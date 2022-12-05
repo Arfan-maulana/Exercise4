@@ -9,21 +9,22 @@ namespace Exercise4
     internal class Program
     {
 
-        class node
+        class Stack
         {
-
-            public int info;
-            public node next;
-            public node(int i, node n)
+            private int[] ele;
+            private int top;
+            private int max;
+            public Stack(int size)
             {
-                info = i;
-                next = n;
+                ele = new int[size];
+                top = -1;
+                max = size;
             }
-        }
 
 
-        static void Main(string[] args)
-        {
+            static void Main(string[] args)
+            {
+            }
         }
     }
 }
