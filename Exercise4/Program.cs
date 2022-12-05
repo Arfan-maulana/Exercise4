@@ -9,7 +9,18 @@ namespace Exercise4
     internal class Program
     {
 
-      
+        class node
+        {
+
+            public int info;
+            public node next;
+            public node(int i, node n)
+            {
+                info = i;
+                next = n;
+            }
+        }
+
 
         static void Main(string[] args)
         {
