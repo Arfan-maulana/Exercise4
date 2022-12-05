@@ -21,12 +21,22 @@ namespace Exercise4
         }
         class Stack
         {
-            int stack[41];
-            int top;
-            top =-1
+            node top;
+            public Stack()
+            {
+                top = null;
             }
 
-        public void push(int element)
+            bool empty()
+            {
+                if (top == null)
+                    return (true);
+                else
+                    return (false);
+
+            }
+
+            public void push(int element)
         {
 
             node fan;
